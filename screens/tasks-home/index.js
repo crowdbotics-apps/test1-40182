@@ -21,7 +21,9 @@ const TasksHome = () => {
 
       <Text style={[styles.mr10, styles.btnText]}>To do List</Text>
       <View style={styles.textInput}>
-        <Text style={styles.text}>List down what you need help with, and well connect you with takers.</Text>
+        <Text style={styles.text}>
+          List down what you need help with, and well connect you with takers.
+        </Text>
         <Pressable style={styles.createBtn}>
           <Text style={styles.btnText}>+ Create List</Text>
         </Pressable>
@@ -34,8 +36,12 @@ const TasksHome = () => {
           <Image source={require("./assets/next.png")} style={styles.next} />
         </View>
       </View>
-      <View style={styles.filterContainer}><TaskerFlatList /></View>
-      <View style={styles.filterContainer}><TaskerFlatList /></View>
+      <View style={styles.filterContainer}>
+        <TaskerFlatList />
+      </View>
+      <View style={styles.filterContainer}>
+        <TaskerFlatList />
+      </View>
 
       <View style={styles.bottom}>
         <Image source={require("./assets/home.png")} style={styles.star} />
@@ -178,17 +184,6 @@ const styles = StyleSheet.create({
   filterContainer: {
     width: "100%",
     paddingLeft: 15
-  },
-  EoyDqAfJ: {
-    backgroundColor: colors.undefined
-  },
-  AhFCGJlX: {
-    backgroundColor: titleColor.undefined
-  },
-  uSFxzVJw: {
-    height: 100,
-    width: 7,
-    backgroundColor: "white"
   }
 });
 
@@ -240,13 +235,13 @@ const TaskerFlatList = () => {
     price,
     index
   }) => <TouchableNativeFeedback>
-    <View style={[styleSheet.item, styles.EoyDqAfJ]}>
-      <Text style={[styleSheet.itemText]}>{taskName}</Text>
-      <View style={[styleSheet.titleText, styles.AhFCGJlX]}>
-      <Text style={[styleSheet.name]}>Project cost:</Text>
-      <Text style={[styleSheet.price]}>{price}</Text>
+      <View style={[styleSheet.item, styles.EoyDqAfJ]}>
+        <Text style={[styleSheet.itemText]}>{taskName}</Text>
+        <View style={[styleSheet.titleText, styles.AhFCGJlX]}>
+          <Text style={[styleSheet.name]}>Project cost:</Text>
+          <Text style={[styleSheet.price]}>{price}</Text>
+        </View>
       </View>
-    </View>
     </TouchableNativeFeedback>;
 
   const Separator = () => {
