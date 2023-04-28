@@ -1,7 +1,10 @@
 import React from "react";
 import { Text, View, StyleSheet, ScrollView, Image, Pressable, TextInput, TouchableNativeFeedback, FlatList } from "react-native";
 
-const TasksHome = () => {
+const TasksHome = ({
+  route
+}) => {
+  const {} = route.params || {};
   return <ScrollView style={styles.container}>
       <View style={styles.header}>
         <View style={styles.locContainer}>
